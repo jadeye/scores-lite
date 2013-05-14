@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/helpTeam"
+        android:icon="@android:drawable/ic_menu_help"
+        android:showAsAction="always"
+        android:title="help">
+    </item>
+    <item
+        android:id="@+id/menuPointer2"
+        android:showAsAction="always|withText"
+        android:title="MENU-->"/><item android:id="@+id/phone" android:showAsAction="ifRoom" android:title="setup texts">
+    </item>
+    <item
+        android:id="@+id/resetTimer"
+        android:showAsAction="ifRoom"
+        android:title="reset timer"/>
+    <item
+        android:id="@+id/resetScore"
+        android:showAsAction="ifRoom"
+        android:title="reset score"/>
+    <item
+        android:id="@+id/resetStats"
+        android:showAsAction="ifRoom"
+        android:title="reset stats"/>
+    <item
+        android:id="@+id/resetAll"
+        android:showAsAction="ifRoom"
+        android:title="reset all"/>
+    
+
+</menu>

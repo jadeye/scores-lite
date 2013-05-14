@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fm.gaa_scores.lite"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="fm.gaa_scores.lite.Startup"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="fm.gaa_scores.lite.HelpActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <provider
+            android:name="fm.gaa_scores.lite.TeamContentProvider"
+            android:authorities="fm.gaa_scores.lite.provider.team"
+            android:exported="false" />
+    </application>
+
+</manifest>

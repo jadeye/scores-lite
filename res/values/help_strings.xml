@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="teamHelp">
+<![CDATA[
+ <h1>HELP - TEAM SCREEN</h1>
+<p>Touch <b>change team name</b> button to enter a new name for the current team.<br/><br/></p>
+<p>
+<b>TEAM SELECTION</b><br/>
+Select the team lineup by touching any of the position buttons to get option to <b>enter 
+new player name</b> or select from list of available players.<br/>
+Repeat for each position.<br/>
+To remove a player from a position, touch the button and choose option to <b>reset position
+to number</b> or touch on an available player to swap them in.<br/><br/>
+To change the name of an entered player or correct mistakes you need to delete them 
+(menu option) and re enter the name.
+</p>
+<p>
+<b>ADDITIONAL PLAYERS / SUBS</b><br/>
+If you have more than 15 players it is best to enter all names before the start so that they 
+can be swapped in as subs during the match. <br/>Add additional players by clicking on a position
+button and choosing the <b>enter new player name</b> option. Repeat on the same button until 
+all players on the panel are entered. Then touch on the position button again and swap back in
+the original player selected.<br/><br/>
+Touch <b>make substitution</b> to record a substituion in the list of match/stats events.
+ You will be asked to select which player is coming off and then select player going on.
+ (Note that the name of the player going on must exist on the team already i.e. their
+ name must have been entered previously.) <br/><br/></p>
+<p>Touch <b>reset team selection</b> to reset all positions back to a number.  Note that player 
+names already entered are saved for reuse.</p>
+</p> 
+<p><b>Cards</b> - Any black/yellow/red cards recorded in <b>enter stats</b> in the <b>SCORES</b> screen will
+be displayed here</p>
+<p><b>Subs</b> - Substitutions made will be displayed here.</p>
+<p>
+<b>ACTION BAR MENU</b><br/>
+<b>delete a player</b> - delete a player from the current team panel.<br/>
+<b>create new team</b> - create a new team, you will be prompted for the team name.  Note that
+the current team, players and team lineup are automatically saved and can be retrieved later.<br/>
+<b>load a saved team</b> - retrieve a previously saved team, you can select the name from a list. Note that a team
+loaded in the other team screen will not be available<br/>
+<b>delete a team</b> - delete an existing team, you will be asked to select name from list.  Note that 
+currently active teams can not be deleted.<br/>
+<b>reset current team selection</b> - reset all positions back to a number.  Note that player 
+names already entered are saved for reuse.<br/>
+</p>
+
+ 
+ ]]>
+    </string>
+    
+    
+    <string name="scoresHelp">
+<![CDATA[
+<h1>HELP - SCORES SCREEN</h1>
+<p>
+<b>TIMER SECTION</b><br/>
+Touch <b>start/stop</b> button to control timer.<br/>
+Touch <b>mins/half</b> button to set timer length.
+<br/>
+Touch <b>1st half</b> button to set period of match. Extra time can be selected.
+<br/>
+Touch <b>-</b> or <b>+</b> button to increment or decrement timer by 30 secs.
+<br/>
+Touch <b>mins/half</b> button to set timer length.
+</p>
+<p>
+<b>SCORES SECTION</b><br/>
+Change Team Names by touching on the name and typing in new text.<br/>
+Touch on the <b>comment</b> field to enter any additional details such as location, competition, hashtags for tweets, etc.<br/>
+Touch <b>goals or points</b> buttons to increase score.<br/>
+Touch <b>-</b> buttons to decrease score.
+<br/>
+Touch <b>enter stats</b> button to get to stats recording screen.
+
+</p>
+<p>
+<b>ENTER STATS</b><br/>
+You can record 1 or 2 stats items per event - touch one item from the blue section,
+and touch a qualifying item from the pink section. <br/>
+Touch <b>OK</b> to complete entry and return to SCORES screen.
+</p>
+<p>
+<b>MATCH EVENTS SECTION</b><br/>
+The last four match events recorded in the ENTER STATS screen are displayed here. (Swipe to
+the <b>STATS</b> screen to see the complete list of all match events.)<br/>
+Touch <b>undo last stats entry</b> to delete last stats entry.
+<br/>
+Touch <b>reset all</b> to delete all stats events, reset timer and reset scores to zero.
+</p>
+<p>
+<b>TWEET/TEXT SECTION</b><br/>
+To send Tweets, you need to have the Twitter App, or equivalent, installed on your device and you must
+be logged in.<br/>
+For texts, your device must be capable of sending sms messages.  You can setup the number or numbers to send texts to in the 
+<b>MENU</b> section.<br/><br/>
+Touch <b>tweet score</b> or <b>text score</b> to send the current score. 
+The contents (if any) of the <b>comment</b> field
+will also be included.
+</p>
+<p>
+<b>ACTION BAR MENU</b><br/>
+<b>setup texts</b> - enter the phone number to send sms texts to. You can enter more than one number, just use a comma to 
+separate the phone numbers.<br/>
+<b>reset timer</b> - reset timer to 0<br/>
+<b>reset score</b> - reset score to 0<br/>
+<b>reset stats</b> - delete all stats events and reset stats summary to 0<br/>
+<b>reset all</b> - reset timer, scores, stats and delete comment<br/>
+</p>
+]]>
+    </string>
+    
+    <string name="reviewHelp">
+<![CDATA[
+<h1>HELP - REVIEW SCREEN</h1>
+<p>
+Summary of match stats is shown at top of screen.<br/><br/>
+List of match/stats events recorded is displayed at the bottom of the screen. Swipe up/down
+to scroll.
+</p>
+
+
+
+
+]]>
+    </string>
+    
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listrtxt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left|center_vertical"
+    android:gravity="center"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp"
+    android:textSize="10sp"
+    android:textStyle="bold" />
+

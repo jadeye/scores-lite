@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/loadPanel"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:showAsAction="withText"
+        android:title="import panel"/>
+    <item
+        android:id="@+id/savePanel"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:showAsAction="withText"
+        android:title="export panel"/>
+    
+</menu>
