@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/button_pressed" 
-        android:state_pressed="true"/>
-    <item android:drawable="@drawable/button_focused" 
-        android:state_focused="true"/>
-    <item android:drawable="@drawable/button_default"/>
+    <item android:state_pressed="true" >
+        <shape>
+            <solid
+                android:color="#999999" />
+            <stroke
+                android:width="0dp"
+                android:color="#666666" />
+            <corners
+                android:radius="3dp" />
+            <padding
+                android:left="0dp"
+                android:top="0dp"
+                android:right="0dp"
+                android:bottom="0dp" />
+        </shape>
+    </item>
+     <item android:state_focused="true" >
+        <shape>
+            <gradient
+                android:startColor="#aaaaaa"
+                android:endColor="#666666"
+                android:angle="270" />
+            <stroke
+                android:width="0dp"
+                android:color="#666666" />
+            <corners
+                android:radius="3dp" />
+            <padding
+                android:left="0dp"
+                android:top="0dp"
+                android:right="0dp"
+                android:bottom="0dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#cacaca"
+                android:endColor="#999999"
+                android:angle="270" />
+            <stroke
+                android:width="0dp"
+                android:color="#666666" />
+            <corners
+                android:radius="3dp" />
+            <padding
+                android:left="0dp"
+                android:top="0dp"
+                android:right="0dp"
+                android:bottom="0dp" />
+        </shape>
+    </item>
 </selector>

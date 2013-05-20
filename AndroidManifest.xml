@@ -15,7 +15,10 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="fm.gaa_scores.lite.Startup"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +29,8 @@
             android:name="fm.gaa_scores.lite.HelpActivity"
             android:label="@string/app_name" >
         </activity>
-         <provider
+
+        <provider
             android:name="fm.gaa_scores.lite.TeamContentProvider"
             android:authorities="fm.gaa_scores.lite.provider.team"
             android:exported="false" />

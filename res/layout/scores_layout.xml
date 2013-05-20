@@ -1,64 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layoutRecorddm"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="bottom"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:gravity="bottom"
     android:orientation="vertical" >
 
-    <ScrollView
-        android:id="@+id/scrollView30"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutRecorddm"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
 
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent"
+            android:layout_weight="1.07"
+            android:background="#bbbbbb"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|right"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="fill_vertical|center_horizontal"
+                android:text="Start Time: 00:00"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.08"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/mins_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="8dp"
+                android:layout_weight=".75"
+                android:gravity="bottom"
+                android:text="mins/half"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/ttime_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:text="time gone"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/time_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|right"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:text="time left"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".94"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/mins_per_half"
+                    style="@style/TextShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:text="30"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/bPeriod"
+                    style="@style/TextShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:text="1st half"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
             <LinearLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#bbbbbb"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal"
                 android:paddingBottom="2dp"
                 android:paddingTop="2dp" >
 
-                <TextView
-                    android:id="@+id/start_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|right"
-                    android:layout_marginRight="4dp"
-                    android:gravity="fill_vertical|center_horizontal"
-                    android:text="Start Time: 00:00"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <RelativeLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:descendantFocusability="beforeDescendants"
-                android:focusableInTouchMode="true"
-                android:orientation="horizontal"
-                android:paddingBottom="5dp" >
-
                 <Button
                     android:id="@+id/start_stop_timer"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bPeriod"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignTop="@+id/mins_per_half"
-                    android:layout_below="@+id/ttime_text"
-                    android:layout_gravity="top"
-                    android:layout_marginLeft="2dp"
+                    style="@style/TextShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="1dp"
-                    android:background="@drawable/button_custom"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue"
                     android:gravity="center_vertical|center_horizontal"
                     android:minHeight="0dp"
                     android:minWidth="0dp"
@@ -66,29 +153,16 @@
                     android:textSize="14sp" />
 
                 <Button
-                    android:id="@+id/mins_per_half"
-                    android:layout_width="60dp"
-                    android:layout_height="28dp"
-                    android:layout_marginBottom="1dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_toRightOf="@+id/start_stop_timer"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:padding="0dp"
-                    android:text="30"
-                    android:textSize="14sp" />
-
-                <Button
                     android:id="@+id/decrease_timer"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/start_stop_timer"
-                    android:layout_marginRight="3dp"
-                    android:layout_toLeftOf="@+id/time_gone"
-                    android:background="@drawable/button_custom"
+                    style="@style/TextShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/btn_blue"
                     android:gravity="center_vertical|center_horizontal"
                     android:minHeight="0dp"
                     android:minWidth="0dp"
@@ -99,29 +173,32 @@
 
                 <TextView
                     android:id="@+id/time_gone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="46dp"
-                    android:layout_alignBottom="@+id/bPeriod"
-                    android:layout_below="@+id/ttime_text"
-                    android:layout_gravity="center_vertical|center"
-                    android:layout_marginBottom="4dp"
-                    android:layout_toLeftOf="@+id/increase_timer"
-                    android:background="@drawable/button_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_cyan"
                     android:gravity="center_vertical|center_horizontal"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
+                    android:shadowColor="#000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
                     android:text="00:00"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/increase_timer"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/start_stop_timer"
-                    android:layout_marginLeft="3dp"
-                    android:layout_toLeftOf="@+id/time_to_go"
-                    android:background="@drawable/button_custom"
+                    style="@style/TextShadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/btn_blue"
                     android:gravity="center_vertical|center_horizontal"
                     android:minHeight="0dp"
                     android:minWidth="0dp"
@@ -131,438 +208,444 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/time_left"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/time_to_go"
-                    android:layout_alignRight="@+id/time_to_go"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="time left"
-                    android:textSize="10sp" />
-
-                <TextView
                     android:id="@+id/time_to_go"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/time_gone"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignTop="@+id/time_gone"
-                    android:layout_gravity="right|center_vertical|fill_horizontal|end"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/button_default"
+                    style="@style/TextShadowB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight=".97"
+                    android:background="@drawable/btn_cyan"
                     android:gravity="center_vertical|center_horizontal"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
+                    android:shadowColor="#000"
                     android:text="00:00"
                     android:textSize="18sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/ttime_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/time_gone"
-                    android:layout_toRightOf="@+id/decrease_timer"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="time gone"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/mins_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/mins_per_half"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/mins_per_half"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="mins/half"
-                    android:textSize="10sp" />
-
-                <Button
-                    android:id="@+id/bPeriod"
-                    android:layout_width="60dp"
-                    android:layout_height="28dp"
-                    android:layout_alignLeft="@+id/mins_per_half"
-                    android:layout_below="@+id/mins_per_half"
-                    android:layout_marginTop="1dp"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:padding="0dp"
-                    android:text="1st half"
-                    android:textSize="12sp" />
-            </RelativeLayout>
-
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/bg_custom"
-                android:orientation="horizontal" >
-
-                <EditText
-                    android:id="@+id/ourTeam"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:padding="0dp"
-                    android:text="OWN TEAM"
-                    android:textColor="#f00"
-                    android:textSize="18sp"
-                    android:textStyle="bold" >
-                </EditText>
-
-                <EditText
-                    android:id="@+id/oppTeam"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:padding="0dp"
-                    android:text="OPPOSITION"
-                    android:textColor="#f00"
-                    android:textSize="18sp"
-                    android:textStyle="bold" >
-                </EditText>
             </LinearLayout>
+        </LinearLayout>
 
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1.04"
+            android:background="@drawable/bg_custom"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/ourTeam"
+                style="@style/TextShadowB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_custom"
-                android:orientation="horizontal"
-                android:paddingBottom="2dp" >
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="0dp"
+                android:text="OWN TEAM"
+                android:textColor="#f00"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/TextView01"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="4dp"
-                    android:layout_weight="3"
-                    android:gravity="right|center_vertical"
-                    android:padding="0dp"
-                    android:text="COMMENT:"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/etLocn"
-                    android:layout_width="match_parent"
-                    android:layout_height="28dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="additional details, hashtags, etc."
-                    android:paddingBottom="0dp"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="0dp"
-                    android:paddingTop="0dp"
-                    android:textSize="14sp"
-                    android:textStyle="bold" >
-                </EditText>
-            </LinearLayout>
-
-            <RelativeLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
+            <EditText
+                android:id="@+id/oppTeam"
+                style="@style/TextShadowB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_custom"
-                android:orientation="horizontal" >
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+               android:gravity="center_vertical|center_horizontal"
+                 android:padding="0dp"
+                android:text="OPPOSITION"
+                android:textColor="#f00"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-                <Button
-                    android:id="@+id/home_points"
-                    android:layout_width="54dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/home_goals"
-                    android:layout_alignBottom="@+id/home_goals"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_toRightOf="@+id/home_goals"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:text="+"
-                    android:textSize="24sp" />
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.04"
+            android:background="@drawable/bg_custom"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp" >
 
-                <Button
-                    android:id="@+id/dec_home_points"
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/dec_home_goals"
-                    android:layout_alignBottom="@+id/home_points"
-                    android:layout_toRightOf="@+id/home_points"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:text="-"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/dec_opp_goals"
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/dec_home_points"
-                    android:layout_alignBottom="@+id/dec_home_points"
-                    android:layout_toLeftOf="@+id/opp_goals"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:text="-"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/opp_goals"
-                    android:layout_width="42dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/home_goals"
-                    android:layout_alignBottom="@+id/dec_opp_goals"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_toLeftOf="@+id/opp_points"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:text="+"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/opp_points"
-                    android:layout_width="54dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/home_goals"
-                    android:layout_alignBottom="@+id/opp_goals"
-                    android:layout_marginLeft="1dp"
-                    android:layout_toLeftOf="@+id/dec_opp_points"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:text="+"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/dec_opp_points"
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/dec_home_goals"
-                    android:layout_alignBottom="@+id/opp_points"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="2dp"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:text="-"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/home_goals"
-                    android:layout_width="42dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_toRightOf="@+id/dec_home_goals"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:text="+"
-                    android:textSize="24sp" />
-
-                <Button
-                    android:id="@+id/dec_home_goals"
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignTop="@+id/home_goals"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/button_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:text="-"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/points_label2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/opp_points"
-                    android:layout_alignRight="@+id/opp_points"
-                    android:gravity="center_horizontal"
-                    android:text="points"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/goals_label2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/opp_goals"
-                    android:layout_alignRight="@+id/opp_goals"
-                    android:gravity="center_horizontal"
-                    android:text="goals"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/goals_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/home_goals"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignRight="@+id/home_goals"
-                    android:gravity="center_horizontal"
-                    android:text="goals"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/points_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/home_points"
-                    android:layout_alignParentTop="true"
-                    android:layout_toLeftOf="@+id/dec_home_points"
-                    android:gravity="center_horizontal"
-                    android:text="points"
-                    android:textSize="10sp" />
-            </RelativeLayout>
-
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
+            <TextView
+                android:id="@+id/TextView01"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_custom"
-                android:orientation="horizontal"
-                android:paddingBottom="2dp" >
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="3"
+                android:gravity="right|center_vertical"
+                android:padding="0dp"
+                android:text="COMMENT:"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="2dp"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="total:"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/home_total"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:gravity="center_horizontal"
-                    android:text="(00)"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/up_down_draw_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center_horizontal"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="4dp"
-                    android:text="drawn game"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/home_difference"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text=" "
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="2dp"
-                    android:gravity="center_horizontal"
-                    android:text="total:"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/opp_total"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:gravity="center_horizontal"
-                    android:text="(00)"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
+            <EditText
+                android:id="@+id/etLocn"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:hint="additional details, hashtags, etc."
+                android:paddingBottom="0dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
+                android:textSize="14sp"
+                android:textStyle="bold" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.08"
+            android:background="@drawable/bg_custom"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/goals_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|right"
+                android:paddingRight="10dp"
+                android:text="goals"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/points_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|left"
+                android:paddingLeft="10dp"
+                android:text="points"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/goals_label2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|right"
+                android:paddingRight="10dp"
+                android:text="goals"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/points_label2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|left"
+                android:paddingLeft="10dp"
+                android:text="points"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".92"
+            android:background="@drawable/bg_custom"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/dec_home_goals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.03"
+                android:background="@drawable/btn_green"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="-"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/home_goals"
+                style="@style/TextShadowB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight=".97"
+                android:background="@drawable/btn_green"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/home_points"
+                style="@style/TextShadowB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/home_goals"
+                android:layout_alignBottom="@+id/home_goals"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_toRightOf="@+id/home_goals"
+                android:layout_weight=".97"
+                android:background="@drawable/btn_green"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/dec_home_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/dec_home_goals"
+                android:layout_alignBottom="@+id/home_points"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/home_points"
+                android:layout_weight="1.03"
+                android:background="@drawable/btn_green"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="-"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/dec_opp_goals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/dec_home_points"
+                android:layout_alignBottom="@+id/dec_home_points"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/opp_goals"
+                android:layout_weight="1.03"
+                android:background="@drawable/btn_green"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="-"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/opp_goals"
+                style="@style/TextShadowB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/home_goals"
+                android:layout_alignBottom="@+id/dec_opp_goals"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_toLeftOf="@+id/opp_points"
+                android:layout_weight=".97"
+                android:background="@drawable/btn_green"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/opp_points"
+                style="@style/TextShadowB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/home_goals"
+                android:layout_alignBottom="@+id/opp_goals"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_toLeftOf="@+id/dec_opp_points"
+                android:layout_weight=".97"
+                android:background="@drawable/btn_green"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/dec_opp_points"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/dec_home_goals"
+                android:layout_alignBottom="@+id/opp_points"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.03"
+                android:background="@drawable/btn_green"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="-"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_custom"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_custom"
-                android:orientation="horizontal"
-                android:paddingBottom="3dp" >
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="total:"
+                android:textSize="12sp" />
 
-                <Button
-                    android:id="@+id/buttonShotHome"
-                    android:layout_width="match_parent"
-                    android:layout_height="36dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_custom"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:padding="0dp"
-                    android:text="enter stats"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/home_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="(00)"
+                android:textColor="#f00"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/buttonShotOpp"
-                    android:layout_width="match_parent"
-                    android:layout_height="36dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_custom"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:padding="0dp"
-                    android:text="enter stats"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/up_down_draw_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingLeft="2dp"
+                android:paddingRight="4dp"
+                android:text="drawn game"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/home_difference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:textColor="#f00"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text=" "
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="total:"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/opp_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="(00)"
+                android:textColor="#f00"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_custom"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp" >
+
+            <Button
+                android:id="@+id/buttonShotHome"
+                style="@style/TextShadowB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_yellow"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="0dp"
+                android:text="enter stats"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonShotOpp"
+                style="@style/TextShadowB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_yellow"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:padding="0dp"
+                android:text="enter stats"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView30"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.8" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
             <LinearLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -587,7 +670,7 @@
                 <Button
                     android:id="@+id/buttonUndo"
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_height="26dp"
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttond_custom"
@@ -598,7 +681,7 @@
                 <Button
                     android:id="@+id/reset_all"
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_height="26dp"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="2dp"
@@ -644,8 +727,8 @@
                 <Button
                     android:id="@+id/bTweetScore"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="1dp"
+                    android:layout_height="26dp"
+                    android:layout_marginRight="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttond_custom"
                     android:minWidth="22dp"
@@ -656,13 +739,25 @@
                 <Button
                     android:id="@+id/bTextScore"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="1dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttond_custom"
                     android:padding="0dp"
                     android:text="text  score"
                     android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
