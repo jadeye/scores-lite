@@ -49,18 +49,18 @@
     <drawable name="greenBG">#008800</drawable>
 
     <style name="TextShadowB">
-        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowColor">#cccccc</item>
          <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">1</item>
-        <item name="android:shadowRadius">2</item>
+        <item name="android:shadowRadius">1</item>
     </style>
      <style name="TextShadow">
         <item name="android:textStyle">bold</item>
-        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowColor">#cccccc</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">1</item>
-        <item name="android:shadowRadius">2</item>
+        <item name="android:shadowRadius">1</item>
     </style>
 
 </resources>
