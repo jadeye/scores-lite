@@ -217,9 +217,6 @@ public class ReviewFragment extends Fragment {
 		puckWonCleanHome = sharedPref.getInt("PUCKWONCLEANHOME", 0);
 		puckLostCleanHome = sharedPref.getInt("PUCKLOSTCLEANHOME", 0);
 
-		puckWonCleanHome = sharedPref.getInt("PUCKWONCLEANHOME", 0);
-		puckLostCleanHome = sharedPref.getInt("PUCKLOSTCLEANHOME", 0);
-
 		totPOpp = sharedPref.getInt("TOTPOPP", 0);
 		puckWonCleanOpp = sharedPref.getInt("PUCKWONCLEANOPP", 0);
 		puckLostCleanOpp = sharedPref.getInt("PUCKLOSTCLEANOPP", 0);
@@ -230,10 +227,10 @@ public class ReviewFragment extends Fragment {
 		addPuckWonCleanOpp(0) ;
 		addPuckLostCleanOpp(0); 
 		
+		bSendAll = (Button) v.findViewById(R.id.bSendAll);
+		bSendAll.setOnClickListener(sendAllListener);
+
 		
-		
-		
-	
 		//fill in list view with datavbase
 		listViewStats = (ListView) v.findViewById(R.id.listView1);
 		
@@ -536,13 +533,83 @@ public class ReviewFragment extends Fragment {
 			tOppTeam.setText(oppTeam);
 	}
 	
-
+	// for reset buttons diplay message to long click, won't work with ordinary
+	// click
+	OnClickListener sendAllListener = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			StringBuilder sb = new StringBuilder("");
+			
+			
+			sb.append("\n");
+	
+			Uri allTitles = TeamContentProvider.CONTENT_URI_2;
+			String[] projection = { TeamContentProvider.STATSLINE };
+			CursorLoader cL = new CursorLoader(getActivity(), allTitles, projection, null,
+					null, TeamContentProvider.STATSID);
+			Cursor c1 = cL.loadInBackground();
+			if (c1.getCount() > 0) {
+				c1.moveToFirst();
+				do {
+					// read in player nicknames
+					sb.append((c1.getString(c1
+							.getColumnIndexOrThrow(TeamContentProvider.STATSLINE)))
+							+ "\n");
+				} while (c1.moveToNext());
+			}
+			c1.close();
+			
+			sb.append("\nTeam 1: "+tOwnTeam.getText()+"\n");
+			sb.append(shotGoalsHome +" Goals,  "+shotPointsHome+" Points.  Total:"+tHomeTotal.getText()+"\n");
+			sb.append(shotGoalsPlayHome+" goals from play  "+shotPointsPlayHome+" points from play \n");
+			sb.append("wides: "+shotWidesHome+"\n");
+			sb.append("out for 45/65: "+shot45Home+"\n");
+			sb.append("saved/short: "+shotSavedHome+"\n");
+			sb.append("off posts: "+shotPostsHome+"\n");
+			sb.append("frees conceded: "+freeConcededHome+"\n");
+			sb.append("Total puckouts: "+totPHome+"\n");
+			sb.append("own puckouts won: "+puckWonCleanHome+"\n");
+			sb.append("own puckouts lost: "+puckLostCleanHome+"\n");
+			
+			sb.append("\nTeam 2: "+tOppTeam.getText()+"\n");
+			sb.append(shotGoalsOpp +" Goals,  "+shotPointsOpp+" Points.  Total:"+tOppTotal.getText()+"\n");
+			sb.append(shotGoalsPlayOpp+" goals from play  "+shotPointsPlayOpp+" points from play \n");
+			sb.append("wides: "+shotWidesOpp+"\n");
+			sb.append("out for 45/65: "+shot45Opp+"\n");
+			sb.append("saved/short: "+shotSavedOpp+"\n");
+			sb.append("off posts: "+shotPostsOpp+"\n");
+			sb.append("frees conceded: "+freeConcededOpp+"\n");
+			sb.append("Total puckouts: "+totPOpp+"\n");
+			sb.append("own puckouts won: "+puckWonCleanOpp+"\n");
+			sb.append("own puckouts lost: "+puckLostCleanOpp+"\n");
+			
+	
+			Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
+			emailIntent
+					.putExtra(Intent.EXTRA_SUBJECT, "match report "
+							+ ((Startup) getActivity()).getFragmentScore()
+									.getLocText());
+			emailIntent.putExtra(Intent.EXTRA_TEXT, sb.toString());
+			emailIntent.setType("text/plain");
+			startActivity(Intent.createChooser(emailIntent, "Share Using:"));
+		}
+	};
+	
+	
+	
+	
 	
 	@Override
 	public void onCreateOptionsMenu(final Menu menu, final MenuInflater inflater) {
         inflater.inflate(R.menu.review_menu, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
+	
+	
+
+	
+	
+	
 	// set up help menu in action bar
 	//@Override
 	

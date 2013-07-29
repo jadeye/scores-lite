@@ -26,7 +26,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import fm.gaa_scores.lite.R;
-
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -75,8 +74,8 @@ public class ScoresFragment extends Fragment {
 	private Button bDecOppGoals, bOppGoals, bOppPoints, bDecOppPoints;
 	private Button bShotHome, bShotOpp, bMinsPerHalf;
 	public Button bPeriod;
-	private Button bUndo, btweetScore;
-	private Button btextScore;
+	private Button bUndo, btweetScore, bTweetLast;
+	private Button btextScore, bTextLast;
 	private int statsButton, txtButton, periodInt = 0;
 	private String stats1, stats2, team, phone, periodStr;
 	private EditText tLoc, input;
@@ -482,9 +481,15 @@ public class ScoresFragment extends Fragment {
 
 		btweetScore = (Button) v.findViewById(R.id.bTweetScore);
 		btweetScore.setOnClickListener(tweetScoreListener);
+		bTweetLast = (Button) v.findViewById(R.id.bTweetLast);
+		bTweetLast.setOnClickListener(tweetLastListener);
+
 		
 		btextScore = (Button) v.findViewById(R.id.bTextScore);
 		btextScore.setOnClickListener(tweetScoreListener);
+		bTextLast = (Button) v.findViewById(R.id.bTextLast);
+		bTextLast.setOnClickListener(tweetLastListener);
+
 		
 		return v;
 	}
@@ -562,6 +567,77 @@ public class ScoresFragment extends Fragment {
 				+ (bOppPoints.getText().equals("+") ? "0" : bOppPoints
 						.getText()) + tOppTotal.getText() + ". ";
 	}
+	
+	OnClickListener tweetLastListener = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			txtButton = ((Button) v).getId();
+			String strA="",str="";
+			Uri allTitles = TeamContentProvider.CONTENT_URI_2;
+			String[] projection = { TeamContentProvider.STATSLINE };
+			CursorLoader cL;
+			cL = new CursorLoader(getActivity(), allTitles, projection, null,
+					null, TeamContentProvider.STATSID + " desc");
+			Cursor c1 = cL.loadInBackground();
+			txtList.clear();// ////////////??????????
+			txtListOut.clear();
+			if (c1.getCount() > 0) {
+				c1.moveToFirst();			
+					// read in player nicknames
+					strA=" "+c1.getString(c1
+							.getColumnIndexOrThrow(TeamContentProvider.STATSLINE));			
+			}
+			
+			
+			if (((strA.contains("1st half")) || (strA.contains("2nd half")))
+					&& (strA.contains("mins "))) {
+				str = strA.substring(strA.indexOf("half") + 5,
+						strA.length());
+			} else if (((strA.contains("ET 1st")) || (strA
+					.contains("ET 2nd")))) {
+				str = strA.substring(strA.indexOf("ET") + 7,
+						strA.length());
+			} else {
+				str = strA;
+			}
+
+
+
+			switch (txtButton) {
+			case R.id.bTweetLast:
+				try {
+					Intent shareIntent = findTwitterClient();
+					shareIntent.putExtra(Intent.EXTRA_TEXT, getScore()+str);
+					startActivity(Intent.createChooser(shareIntent, "Share"));
+				} catch (Exception ex) {
+					Log.e("Error in Tweet", ex.toString());
+					Toast.makeText(
+							getActivity(),
+							"Can't find twitter client\n"
+									+ "Please install Twitter App\nand login to Twitter",
+							Toast.LENGTH_LONG).show();
+				}
+				break;
+			case R.id.bTextLast:
+				try {
+					Intent intentText = new Intent(Intent.ACTION_VIEW);
+					intentText.setType("vnd.android-dir/mms-sms");
+					intentText.putExtra("sms_body", getScore()+str);
+					intentText.setData(Uri.parse("sms: " + phone));
+					startActivity(intentText);
+				} catch (Exception ex) {
+					Log.e("Error in Text", ex.toString());
+					Toast.makeText(getActivity(),
+							"Unable to send text message", Toast.LENGTH_LONG)
+							.show();
+				}
+				break;
+			}
+		}
+	};
+	
+	
+	
 	
 	OnClickListener tweetScoreListener = new OnClickListener() {
 		@Override

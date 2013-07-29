@@ -654,6 +654,36 @@
                 android:paddingTop="0dp"
                 android:text="tweet score"
                 android:textSize="12sp" />
+            
+            <Button
+                android:id="@+id/bTweetLast"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttond_custom"
+                android:paddingBottom="0dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="0dp"
+                android:text="tweet last"
+                android:textSize="12sp" />
+            
+            <Button
+                android:id="@+id/bTextLast"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttond_custom"
+                android:paddingBottom="0dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="0dp"
+                android:text="text last"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/bTextScore"
