@@ -224,17 +224,49 @@
                         </TableRow>
 
                         <TableRow
-                            android:id="@+id/TableRow01"
+                            android:id="@+id/TableRow02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="#cccccc" >
+
+                            <TextView
+                                android:id="@+id/TextView07"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Out for 45/65**"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tVwHome45"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="0"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/TextView08"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/TableRow01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#bbdddd" >
 
                             <TextView
                                 android:id="@+id/TextView15"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
-                                android:text="Saved"
+                                android:text="Saved/Short"
                                 android:textSize="10sp" />
 
                             <TextView
@@ -259,7 +291,7 @@
                             android:id="@+id/TableRow55"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="#bbdddd" >
+                            android:background="#cccccc" >
 
                             <TextView
                                 android:id="@+id/TextView77"
@@ -291,7 +323,7 @@
                             android:id="@+id/TableRow08"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="#cccccc" >
+                            android:background="#bbdddd" >
 
                             <TextView
                                 android:id="@+id/TextView35"
@@ -312,6 +344,38 @@
 
                             <TextView
                                 android:id="@+id/tVwFreeWonHomeP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/TableRow03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#cccccc" >
+
+                            <TextView
+                                android:id="@+id/TextView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Total Puckouts***"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tVwHomeTotPuck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="0"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/TextView11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -639,17 +703,50 @@
                         </TableRow>
 
                         <TableRow
-                            android:id="@+id/TableRow19"
+                            android:id="@+id/TableRow04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="#cccccc" >
+
+                            <TextView
+                                android:id="@+id/TextView14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Out for 45/65**"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tVwOpp45"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="0"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/TextView16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textColor="#cccccc"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/TableRow19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#bbdddd" >
 
                             <TextView
                                 android:id="@+id/TextView57"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
-                                android:text="Saved"
+                                android:text="Saved/Short"
                                 android:textSize="10sp" />
 
                             <TextView
@@ -676,7 +773,7 @@
                             android:id="@+id/TableRow48"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="#bbdddd" >
+                            android:background="#cccccc" >
 
                             <TextView
                                 android:id="@+id/tVwShotsPostsP3"
@@ -710,7 +807,7 @@
                             android:id="@+id/TableRow24"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="#cccccc" >
+                            android:background="#bbdddd" >
 
                             <TextView
                                 android:id="@+id/TextView81"
@@ -738,6 +835,39 @@
                                  android:textColor="#cccccc"
                                 android:textSize="12sp" />
 
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/TableRow05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#cccccc" >
+
+                            <TextView
+                                android:id="@+id/TextView18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Total Puckouts***"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tVwOppTotPuck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:text="0"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/TextView19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textColor="#cccccc"
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -851,6 +981,19 @@
             android:layout_weight="3"
             android:text="Match Events:"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bSendAll"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="2"
+            android:background="@drawable/buttond_custom"
+            android:padding="0dp"
+            android:text="share all match data"
+            android:textSize="12sp" />
 
     </LinearLayout>
 

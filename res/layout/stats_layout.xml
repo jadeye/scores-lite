@@ -81,7 +81,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/buttond_custom"
                 android:paddingLeft="30dp"
-                android:text="saved"
+                android:text="saved/short"
                 android:textSize="14sp" />
 
             <RadioButton

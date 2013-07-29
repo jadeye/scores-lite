@@ -45,9 +45,8 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.08"
+            android:layout_weight="1.07"
             android:orientation="horizontal"
-            android:paddingBottom="2dp"
             android:paddingTop="2dp" >
 
             <TextView
@@ -55,18 +54,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="8dp"
-                android:layout_weight=".75"
+                android:layout_marginLeft="1dp"
+                android:layout_weight=".77"
                 android:gravity="bottom"
-                android:text="mins/half"
-                android:textSize="10sp" />
+                android:text="   min/half"
+                android:textSize="8sp" />
 
             <TextView
                 android:id="@+id/ttime_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom"
-                android:layout_weight="1"
+                android:layout_weight=".8"
                 android:gravity="bottom|center_horizontal"
                 android:text="time gone"
                 android:textSize="10sp" />
@@ -89,20 +88,22 @@
             android:orientation="horizontal" >
 
             <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="4.5"
-                android:orientation="vertical" >
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
 
                 <Button
                     android:id="@+id/mins_per_half"
                     style="@style/TextShadow"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="2dp"
                     android:layout_marginLeft="2dp"
                     android:layout_marginTop="1dp"
-                    android:layout_weight="1"
+                    android:layout_weight="1.08"
                     android:background="@drawable/btn_blue"
                     android:gravity="center_vertical|center_horizontal"
                     android:minHeight="0dp"
@@ -116,9 +117,8 @@
                     style="@style/TextShadow"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="2dp"
                     android:layout_marginLeft="2dp"
-                    android:layout_weight="1"
+                    android:layout_weight="1.06"
                     android:background="@drawable/btn_blue"
                     android:gravity="center_vertical|center_horizontal"
                     android:minHeight="0dp"
@@ -126,23 +126,13 @@
                     android:padding="0dp"
                     android:text="1st half"
                     android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:paddingBottom="2dp"
-                android:paddingTop="2dp" >
 
                 <Button
                     android:id="@+id/start_stop_timer"
                     style="@style/TextShadow"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="4dp"
                     android:layout_marginRight="1dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_blue"
@@ -150,18 +140,18 @@
                     android:minHeight="0dp"
                     android:minWidth="0dp"
                     android:text="start"
-                    android:textSize="14sp" />
+                    android:textSize="18sp" />
 
                 <Button
                     android:id="@+id/decrease_timer"
                     style="@style/TextShadow"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="4dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="1dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_weight="1.2"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1.07"
                     android:background="@drawable/btn_blue"
                     android:gravity="center_vertical|center_horizontal"
                     android:minHeight="0dp"
@@ -175,7 +165,7 @@
                     android:id="@+id/time_gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight=".96"
                     android:background="@drawable/btn_cyan"
                     android:gravity="center_vertical|center_horizontal"
                     android:paddingLeft="8dp"
@@ -193,11 +183,11 @@
                     style="@style/TextShadow"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="4dp"
                     android:layout_marginLeft="1dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_weight="1.2"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1.07"
                     android:background="@drawable/btn_blue"
                     android:gravity="center_vertical|center_horizontal"
                     android:minHeight="0dp"
@@ -213,7 +203,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="2dp"
-                    android:layout_weight=".97"
+                    android:layout_weight=".95"
                     android:background="@drawable/btn_cyan"
                     android:gravity="center_vertical|center_horizontal"
                     android:paddingLeft="8dp"
@@ -267,7 +257,7 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.08"
+            android:layout_weight="1.06"
             android:background="@drawable/bg_custom"
             android:orientation="horizontal"
             android:paddingBottom="2dp"
@@ -329,7 +319,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="10dp"
-                android:layout_weight="1.03"
+                android:layout_weight="1.04"
                 android:background="@drawable/btn_green"
                 android:gravity="center_vertical|center_horizontal"
                 android:minHeight="0dp"
@@ -345,13 +335,13 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="1dp"
                 android:layout_marginRight="1dp"
-                android:layout_weight=".97"
+                android:layout_weight=".95"
                 android:background="@drawable/btn_green"
                 android:gravity="center_vertical|center_horizontal"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
                 android:text="+"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <Button
@@ -364,13 +354,13 @@
                 android:layout_marginLeft="1dp"
                 android:layout_marginRight="1dp"
                 android:layout_toRightOf="@+id/home_goals"
-                android:layout_weight=".97"
+                android:layout_weight=".95"
                 android:background="@drawable/btn_green"
                 android:gravity="center_vertical|center_horizontal"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
                 android:text="+"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <Button
@@ -383,7 +373,7 @@
                 android:layout_marginRight="4dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@+id/home_points"
-                android:layout_weight="1.03"
+                android:layout_weight="1.04"
                 android:background="@drawable/btn_green"
                 android:gravity="center_vertical|center_horizontal"
                 android:minHeight="0dp"
@@ -399,10 +389,10 @@
                 android:layout_alignBaseline="@+id/dec_home_points"
                 android:layout_alignBottom="@+id/dec_home_points"
                 android:layout_marginBottom="10dp"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="2dp"
                 android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/opp_goals"
-                android:layout_weight="1.03"
+                android:layout_weight="1.04"
                 android:background="@drawable/btn_green"
                 android:gravity="center_vertical|center_horizontal"
                 android:minHeight="0dp"
@@ -421,13 +411,13 @@
                 android:layout_marginLeft="1dp"
                 android:layout_marginRight="1dp"
                 android:layout_toLeftOf="@+id/opp_points"
-                android:layout_weight=".97"
+                android:layout_weight=".95"
                 android:background="@drawable/btn_green"
                 android:gravity="center_vertical|center_horizontal"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
                 android:text="+"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <Button
@@ -440,13 +430,13 @@
                 android:layout_marginLeft="1dp"
                 android:layout_marginRight="1dp"
                 android:layout_toLeftOf="@+id/dec_opp_points"
-                android:layout_weight=".97"
+                android:layout_weight=".95"
                 android:background="@drawable/btn_green"
                 android:gravity="center_vertical|center_horizontal"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
                 android:text="+"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <Button
@@ -459,7 +449,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginTop="10dp"
-                android:layout_weight="1.03"
+                android:layout_weight="1.04"
                 android:background="@drawable/btn_green"
                 android:gravity="center_vertical|center_horizontal"
                 android:minHeight="0dp"
@@ -559,8 +549,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/bg_custom"
-            android:orientation="horizontal"
-            android:paddingBottom="3dp" >
+            android:orientation="horizontal" >
 
             <Button
                 android:id="@+id/buttonShotHome"
@@ -580,6 +569,17 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/buttonUndo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:background="@drawable/btn_red"
+                android:padding="0dp"
+                android:text="undo last stats entry"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <Button
                 android:id="@+id/buttonShotOpp"
                 style="@style/TextShadowB"
                 android:layout_width="match_parent"
@@ -596,118 +596,131 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".98"
+            android:background="#ddd"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="3.5"
+                android:gravity="right|center_vertical"
+                android:padding="0dp"
+                android:text="COMMENT:"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLoc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:hint="info, details, location, hashtags, etc."
+                android:paddingBottom="0dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bTweetScore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttond_custom"
+                android:paddingBottom="0dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="0dp"
+                android:text="tweet score"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/bTextScore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttond_custom"
+                android:paddingBottom="0dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="0dp"
+                android:text="text  score"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.04"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:gravity="bottom|left"
+                android:padding="0dp"
+                android:text="Match Events:"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView30"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1.3" >
+        android:layout_marginBottom="5dp"
+        android:layout_weight="5" >
 
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical" >
 
             <LinearLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.04"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal" >
-
-                <TextView
-                    android:id="@+id/TextView01"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_weight="3.6"
-                    android:gravity="right|center_vertical"
-                    android:padding="0dp"
-                    android:text="COMMENT:"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/etLocn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:hint="details, info, location, hashtags, etc."
-                    android:paddingBottom="0dp"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="0dp"
-                    android:paddingTop="0dp"
-                    android:textSize="14sp"
-                    android:textStyle="bold" >
-
-                    <requestFocus />
-                </EditText>
-            </LinearLayout>
-
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                android:padding="0dp" >
-
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|left"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="26dp"
-                    android:layout_marginTop="6dp"
-                    android:padding="0dp"
-                    android:text="Match Events:"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/buttonUndo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="26dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttond_custom"
-                    android:padding="0dp"
-                    android:text="undo last stats entry"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/reset_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="26dp"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttond_custom"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:text="reset all"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/textViewStats"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
+                    android:minLines="4"
                     android:paddingBottom="2dp"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"
@@ -715,50 +728,25 @@
                     android:textColor="#ff0000"
                     android:textSize="11sp"
                     android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/bTweetScore"
+                    android:id="@+id/reset_all"
                     android:layout_width="match_parent"
-                    android:layout_height="26dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttond_custom"
-                    android:minWidth="22dp"
-                    android:padding="0dp"
-                    android:text="tweet score"
-                    android:textSize="12sp" />
-
-                <Button
-                    android:id="@+id/bTextScore"
-                    android:layout_width="match_parent"
-                    android:layout_height="26dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
                     android:layout_marginLeft="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttond_custom"
-                    android:padding="0dp"
-                    android:text="text  score"
-                    android:textSize="12sp" />
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="7"
+                    android:background="@drawable/btn_red"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="reset all"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginTop="1dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal" >
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
